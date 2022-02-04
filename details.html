@@ -50,8 +50,8 @@ window.onload =() => {
       }
     })
     .then(resp=>resp.json())
-    .then(respuesta =>{
-      console.log(respuesta)
+    .then(serverData =>{
+      console.log(serverData)
 
        const containerNode = document.getElementById("container")
 
@@ -65,9 +65,9 @@ window.onload =() => {
          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
            The current link item
          </a>
-         <a href="#" class="list-group-item list-group-item-action">name : ${respuesta.name}</a>
-         <a href="#" class="list-group-item list-group-item-action">price : ${respuesta.price}</a>
-         <a href="#" class="list-group-item list-group-item-action">description : ${respuesta.description}</a>       
+         <a href="#" class="list-group-item list-group-item-action">name : ${serverData.name}</a>
+         <a href="#" class="list-group-item list-group-item-action">price : ${serverData.price}</a>
+         <a href="#" class="list-group-item list-group-item-action">description : ${serverData.description}</a>       
          
         `
          containerNode.appendChild(diver)

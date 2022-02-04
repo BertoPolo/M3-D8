@@ -47,11 +47,11 @@ window.onload =() => {
       }
     })
     .then(resp=>resp.json())
-    .then(respuesta =>{
-      console.log(respuesta)
+    .then(serverData =>{
+      console.log(serverData)
        const containerNode = document.getElementById("container")
 
-       respuesta.forEach(element => {
+       serverData.forEach(element => {
         
         const diver = document.createElement("div")
        diver.classList.add("list-group")
@@ -66,7 +66,7 @@ window.onload =() => {
          <a href="#" class="list-group-item list-group-item-action">name : ${element.name}</a>
          <a href="#" class="list-group-item list-group-item-action">price : ${element.price}</a>
          <a href="#" class="list-group-item list-group-item-action">description : ${element.description}</a>       
-         <a href="details.html?id=${element._id}"> view details</a>
+         <a href="details.html?id=${element._id}" class="list-group-item list-group-item-action"> View details</a>
         `
          containerNode.appendChild(diver)
        });
